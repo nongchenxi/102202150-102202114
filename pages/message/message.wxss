@@ -1,0 +1,61 @@
+.container {
+  padding: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  text-align: center;
+}
+
+.tab-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.message-list {
+  background-color: #fff;
+  width:100% ;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  width:90% ;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.message-info {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content {
+  font-size: 14px;
+  color: #888;
+}
+
+.time {
+  color: #aaa;
+  font-size: 12px;
+}
+
+

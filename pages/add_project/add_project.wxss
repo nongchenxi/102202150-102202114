@@ -1,0 +1,83 @@
+.container {
+  padding: 20px;
+}
+
+.form-item {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.required {
+  color: red;
+  margin-right: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.picker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+  background-color: #f8f8f8;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+checkbox {
+  margin-right: 10px;
+}
+
+.switch {
+  margin-top: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.save-draft {
+  background-color: #ffd700;
+  width: 30%;
+}
+
+.publish {
+  background-color: #32cd32;
+  color: white;
+  width: 30%;
+}
+
+/* 分割线 */
+.divider {
+  height: 1px;
+  width: 99%;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+}
+
+/* 让可选择项更明显 */
+.selectable .picker {
+  background-color: #f0f8ff;
+  border-color: #a0a0a0;
+}

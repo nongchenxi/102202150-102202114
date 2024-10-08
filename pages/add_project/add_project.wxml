@@ -1,0 +1,82 @@
+<view class="container">
+  <!-- 项目名称 -->
+  <view class="form-item">
+    <text class="required">*</text>
+    <text>项目名称</text>
+    <input type="text" placeholder="请输入项目名称" value="{{projectName}}" bindinput="handleInputChange" data-field="projectName" />
+  </view>
+  <view class="divider"></view>
+
+  <!-- 项目人数 -->
+  <view class="form-item">
+    <text class="required">*</text>
+    <text>项目人数</text>
+    <input type="number" placeholder="请输入项目人数" value="{{projectMembers}}" bindinput="handleInputChange" data-field="projectMembers" />
+  </view>
+  <view class="divider"></view>
+
+  <!-- 指导老师 -->
+  <view class="form-item">
+    <text>指导老师</text>
+    <input type="text" placeholder="请输入指导老师" value="{{instructor}}" bindinput="handleInputChange" data-field="instructor" />
+  </view>
+  <view class="divider"></view>
+
+  <!-- 技能需求 -->
+  <view class="form-item">
+    <text>技能需求</text>
+    <checkbox-group bindchange="handleSkillChange" style="position: relative; left: 0rpx; top: 30rpx">
+      <block wx:for="{{skills}}" wx:key="index">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" style="height: 80rpx; display: inline-block; box-sizing: border-box">{{item.name}}</checkbox>
+      </block>
+    </checkbox-group>
+  </view>
+  <view class="divider"></view>
+
+  <!-- 项目类型 -->
+  <view class="form-item selectable">
+    <text class="required">*</text>
+    <text>项目类型</text>
+    <picker mode="selector" range="{{projectTypes}}" bindchange="handleProjectTypeChange">
+      <view class="picker">{{projectType}}</view>
+    </picker>
+  </view>
+  <view class="divider"></view>
+
+  <!-- 项目报名截止日期 -->
+  <view class="form-item selectable">
+    <text class="required">*</text>
+    <text>项目报名截止日期</text>
+    <picker mode="date" bindchange="handleDateChange">
+      <view class="picker">{{deadline || '请选择日期'}}</view>
+    </picker>
+  </view>
+  <view class="divider"></view>
+
+  <!-- 项目描述 -->
+  <view class="form-item" style="position: relative; left: 0rpx; top: 16rpx">
+    <text class="required">*</text>
+    <text>项目描述</text>
+    <textarea placeholder="请输入100字左右的项目描述" value="{{description}}" bindinput="handleInputChange" data-field="description" />
+  </view>
+  <view class="divider"></view>
+
+  <!-- 开关选项 -->
+  <view class="form-item" style="position: relative; left: 0rpx; top: 22rpx">
+    <text>允许陌生人加入我的项目</text>
+    <switch checked="{{allowOutsiders}}" bindchange="handleSwitchChange" data-field="allowOutsiders" />
+  </view>
+  <view class="divider"></view>
+
+  <view class="form-item" style="position: relative; left: 0rpx; top: 18rpx">
+    <text>创建项目小组群聊</text>
+    <switch checked="{{createGroupChat}}" bindchange="handleSwitchChange" data-field="createGroupChat" />
+  </view>
+  <view class="divider"></view>
+
+  <!-- 保存草稿和发布项目按钮 -->
+  <view class="button-group">
+    <button class="save-draft" bindtap="handleSaveDraft" style="width: 256rpx; display: block; box-sizing: border-box; left: -50rpx; top: 0rpx">保存草稿</button>
+    <button class="publish" bindtap="handlePublishProject" style="width: 256rpx; display: block; box-sizing: border-box; left: 50rpx; top: 0rpx">发布项目</button>
+  </view>
+</view>
