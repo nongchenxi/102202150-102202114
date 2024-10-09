@@ -1,10 +1,12 @@
 .container {
   padding: 20px;
+  color: #888888;
 }
 
 .form-item {
   margin-bottom: 20px;
   width: 90%;
+
 }
 
 .required {

@@ -1,0 +1,28 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-bar" bindtap="onsearch">
+    <input placeholder="输入关键词搜索" />
+    <image class="icon" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/sousuo.png"></image>
+  </view>
+
+  <!-- 项目筛选按钮 -->
+  <view class="filter-section">
+    <button class="filter-button {{activeFilter === 'all' ? 'active' : ''}}" bindtap="onFilterChange" data-filter="all">全部项目</button>
+    <button class="filter-button {{activeFilter === 'recruiting' ? 'active' : ''}}" bindtap="onFilterChange" data-filter="recruiting">正在招募</button>
+  </view>
+
+  <!-- 项目列表 -->
+  <view class="project-list">
+    <block wx:for="{{filteredProjects}}" wx:key="id">
+      <view class="project-item">
+        <image class="project-image" src="{{item.image}}"></image>
+        <view class="project-info">
+          <text class="project-title">{{item.title}}</text>
+            <text class="project-tag"  style="position: relative; left: -132rpx; top: 57rpx">{{item.tap}}</text>
+            <text class="project-description"  style="position: relative; left: -228rpx; top: 110rpx">{{item.description}}</text>
+        </view>
+        <view class="project-status {{item.statusClass}}" style="height: 46rpx; display: block; box-sizing: border-box; position: relative; left: 1rpx; top: 40rpx">{{item.status}}</view>
+      </view>
+    </block>
+  </view>
+</view>

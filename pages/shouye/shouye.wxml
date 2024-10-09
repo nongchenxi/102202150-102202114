@@ -1,0 +1,57 @@
+<view class="container">
+
+  <!-- 搜索框 -->
+  <view class="search-bar" bindtap="onsearch">
+    <input placeholder="输入关键词搜索" />
+    <image class="icon" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/sousuo.png"></image>
+  </view>
+
+  <!-- 顶部图片展示 -->
+  <image class="top-image" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/lunbotu.png"></image>
+
+  <!-- 功能按钮 -->
+  <view class="function-section">
+    <view class="function-item" bindtap="onCreateProject">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/chuangjianxiangmu.png"></image>
+      <text>创建项目</text>
+    </view>
+    <view class="function-item" bindtap="onJoinProject">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/zhaohuoban.png"></image>
+      <text>加入项目</text>
+    </view>
+    <view class="function-item" bindtap="onViewAllProjects">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/xiangmu.png"></image>
+      <text>全部项目</text>
+    </view>
+    <view class="function-item">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/gengduo.png"></image>
+      <text>更多</text>
+    </view>
+  </view>
+
+  <!-- 热门项目 -->
+  <view class="section">
+    <view class="section-header">
+      <text>热门项目</text>
+      <text class="more" bindtap="onViewAllProjects">更多 ></text>
+    </view>
+    <view class="project-list">
+      <block wx:for="{{projectList}}" wx:key="id">
+        <view class="project-item" style="height: 128rpx; display: flex; box-sizing: border-box">
+          <image class="project-image" src="{{item.image}}"></image>
+          <view class="project-info">
+            <text class="project-title">{{item.title}}</text>
+            <text class="project-tag" style="position: relative; left: 0rpx; top: 12rpx">{{item.tap}}</text>
+            <view class="project-status" style="position: relative; left: 418rpx; top: -29rpx">{{item.status}}</view>
+            <text class="project-description" style="position: relative; left: 0rpx; top: -29rpx">{{item.description}}</text>
+            
+          </view>
+          
+        </view>
+        
+      </block>
+    </view>
+  </view>
+
+ 
+</view>

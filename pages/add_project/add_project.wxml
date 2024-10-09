@@ -22,16 +22,29 @@
   </view>
   <view class="divider"></view>
 
-  <!-- 技能需求 -->
-  <view class="form-item">
-    <text>技能需求</text>
+<!-- 技能需求 -->
+<view class="form-item">
+  <text>技能需求</text>
+  <view>
     <checkbox-group bindchange="handleSkillChange" style="position: relative; left: 0rpx; top: 30rpx">
       <block wx:for="{{skills}}" wx:key="index">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}" style="height: 80rpx; display: inline-block; box-sizing: border-box">{{item.name}}</checkbox>
+        <view style="display: flex; align-items: center; margin-bottom: 10rpx;">
+          <input 
+            value="{{item.name}}" 
+            bindinput="handleSkillInput" 
+            data-index="{{index}}" 
+            maxlength="10"
+            placeholder="请输入技能" 
+            style="flex: 1; margin-right: 10rpx; border: 1px solid #ddd; padding: 10rpx; border-radius: 5rpx;" 
+          />
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" style="height: 61rpx; position: relative; top: 10rpx; display: block; box-sizing: border-box; width: 232rpx; left: 0rpx">{{item.name}}</checkbox>
+        </view>
       </block>
     </checkbox-group>
+    <button bindtap="addSkill" style="margin-top: 20rpx; padding: 10rpx; background-color: #007aff; color: white; position: relative; left: 0rpx; top: 26rpx">添加技能</button>
   </view>
-  <view class="divider"></view>
+</view>
+<view class="divider"></view>
 
   <!-- 项目类型 -->
   <view class="form-item selectable">
