@@ -1,11 +1,6 @@
-// pages/all_projects/all_projects.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    activeFilter: 'all',
+    activeFilter: 'recruiting', // 默认设置为 'recruiting'
     projectList: [
       {
         id: 1,
@@ -38,24 +33,19 @@ Page({
     filteredProjects: []
   },
 
+  // 页面加载时的生命周期函数
   onLoad() {
-    this.setData({
-      filteredProjects: this.data.projectList
-    });
+    this.filterProjects('recruiting'); // 进入页面时默认显示 '招募中' 项目
   },
-  onsearch(){
-    wx.navigateTo({
-      url: '/pages/search/search'
-    });
-  },
-  
 
-  onFilterChange(e) {
-    const filter = e.currentTarget.dataset.filter;
+  // 根据筛选条件过滤项目
+  filterProjects(filter) {
     let filteredProjects = this.data.projectList;
 
     if (filter === 'recruiting') {
       filteredProjects = filteredProjects.filter(item => item.status === '招募中');
+    } else if (filter === 'all') {
+      filteredProjects = this.data.projectList;
     }
 
     this.setData({
@@ -64,57 +54,16 @@ Page({
     });
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  // 搜索功能
+  onsearch() {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 筛选条件改变时调用
+  onFilterChange(e) {
+    const filter = e.currentTarget.dataset.filter;
+    this.filterProjects(filter); // 重新过滤项目
   }
-})
+});

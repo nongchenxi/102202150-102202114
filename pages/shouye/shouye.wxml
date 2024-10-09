@@ -42,8 +42,8 @@
           <view class="project-info">
             <text class="project-title">{{item.title}}</text>
             <text class="project-tag" style="position: relative; left: 0rpx; top: 12rpx">{{item.tap}}</text>
-            <view class="project-status" style="position: relative; left: 418rpx; top: -29rpx">{{item.status}}</view>
-            <text class="project-description" style="position: relative; left: 0rpx; top: -29rpx">{{item.description}}</text>
+            <view class="project-status" style="position: relative; left: 417rpx; top: -41rpx">{{item.status}}</view>
+            <text class="project-description" style="position: relative; left: -2rpx; top: -21rpx; height: 41rpx; display: block; box-sizing: border-box">{{item.description}}</text>
             
           </view>
           
@@ -52,6 +52,6 @@
       </block>
     </view>
   </view>
-
+  <text class="project-description">-我是有底线的-</text>
  
 </view>

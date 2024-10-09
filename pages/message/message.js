@@ -36,7 +36,22 @@ Page({
   onLoad() {
     // 页面初始化时执行的代码，比如从数据库获取消息
   },
-  
+   // 处理点击事件
+   onTabClick(e) {
+    const icon = e.currentTarget.dataset.icon;
+
+    // 判断是否是 clipboard 图标
+    if (icon === 'clipboard') {
+      wx.navigateTo({
+        url: '/pages/project_management/project_management'  // 这里指定要跳转的页面
+      });
+    } else {
+      wx.showToast({
+        title: '未设置跳转',
+        icon: 'none'
+      });
+    }
+  },
   // 点击消息的事件处理
   goToChat(event) {
     const userId = event.currentTarget.dataset.userid;

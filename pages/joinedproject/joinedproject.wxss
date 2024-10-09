@@ -1,0 +1,94 @@
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+}
+
+/* 标签栏样式 */
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+
+.selected {
+  background-color: #0081ff;
+  color: white;
+}
+
+
+/* 项目卡片样式 */
+.project-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 20rpx;
+  box-shadow: 0 0 15rpx rgba(0, 0, 0, 0.1);
+  width: 93%;
+}
+
+.project-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+
+.project-info {
+  flex-grow: 1;
+}
+
+.project-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.project-status, .project-team {
+  font-size: 28rpx;
+  color: gray;
+}
+
+/* 按钮样式 */
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 10rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+}
+
+.share-button {
+  background-color: #ffc069;
+  color: white;
+}
+
+.discuss-button {
+  background-color: #ff7875;
+  color: white;
+}
+
+.exit-button {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.gray {
+  background-color: #d9d9d9;
+  color: #8c8c8c;
+}

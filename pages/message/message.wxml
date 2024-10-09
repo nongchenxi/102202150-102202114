@@ -1,13 +1,17 @@
-<view class="container" style="height: 1068rpx; display: flex; box-sizing: border-box">
+<view class="container" style="height: 100rpx; display: flex; box-sizing: border-box">
   <!-- 顶部导航 -->
   <view class="tabs">
-    <block wx:for="{{tabs}}" wx:key="label">
-      <view class="tab" style="width: 243rpx; display: block; box-sizing: border-box">
-        <image style="position: relative; left: 70rpx; top: 21rpx" src="{{item.userAvatar}}" class="tab-icon"/>
-        <text style="position: relative; left: -35rpx; top: 45rpx">{{item.label}}</text>
-      </view>
-    </block>
-  </view>
+  <block wx:for="{{tabs}}" wx:key="label">
+    <view class="tab" 
+          bindtap="onTabClick" 
+          data-icon="{{item.icon}}" 
+          data-label="{{item.label}}" 
+          style="width: 243rpx; display: block; box-sizing: border-box">
+      <image style="position: relative; left: 70rpx; top: 21rpx" src="{{item.userAvatar}}" class="tab-icon"/>
+      <text style="position: relative; left: -20rpx; top: 44rpx">{{item.label}}</text>
+    </view>
+  </block>
+</view>
 
   <!-- 消息列表 -->
   <view class="message-list" style="width: 709rpx; height: 590rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: 80rpx">

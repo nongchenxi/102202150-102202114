@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 个人信息区域 -->
+  <view class="profile-section" style="width: 708rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <image class="avatar" src="{{userInfo.avatar}}" />
+    <view class="profile-info">
+      <view class="nickname">{{userInfo.nickname}}</view>
+      <view class="description">{{userInfo.description}}</view>
+      <view class="edit-description" bindtap="onEditProfile">
+        {{userInfo.editText}}
+        <button class="edit-button" style="position: relative; left: -40rpx; top: 1rpx">编辑资料</button>
+      </view>
+    </view>
+    <image class="settings-icon" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/riFill-settings-4-fill 1@1x.png" />
+  </view>
+
+  <!-- 菜单项列表 -->
+  <view class="menu-list">
+    <block wx:for="{{menuItems}}" wx:key="index">
+      <view class="menu-item" bindtap="onMenuItemClick" data-page="{{item.page}}">
+        <image class="menu-icon" src="{{item.icon}}" />
+        <view class="menu-text">{{item.title}}</view>
+        <image class="menu-arrow" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/ze-arrow 1 Copy 4@1x.png" />
+      </view>
+    </block>
+  </view>
+</view>

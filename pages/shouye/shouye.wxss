@@ -2,6 +2,7 @@
 .container {
   padding: 16rpx;
   background-color: #f8f8f8;
+  height: 100%;
 }
 
 /* 顶部标题 */
@@ -144,6 +145,7 @@
 .project-description {
   font-size: 24rpx;
   color: #888888;
+  
 }
 .project-status{
   font-size: 14px;

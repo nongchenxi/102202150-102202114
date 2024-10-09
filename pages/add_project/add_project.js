@@ -31,8 +31,9 @@ Page({
     }));
     this.setData({ skills: updatedSkills });
   },
-   // 处理技能输入框的内容变化
-   handleSkillInput(e) {
+
+  // 处理技能输入框的内容变化
+  handleSkillInput(e) {
     const index = e.currentTarget.dataset.index;
     const value = e.detail.value;
     const updatedSkills = this.data.skills.map((skill, idx) => {
@@ -44,8 +45,8 @@ Page({
     this.setData({ skills: updatedSkills });
   },
 
-   // 添加新的技能
-   addSkill() {
+  // 添加新的技能
+  addSkill() {
     const newSkill = { name: '', checked: false };
     const updatedSkills = [...this.data.skills, newSkill];
     this.setData({ skills: updatedSkills });
@@ -67,19 +68,33 @@ Page({
     this.setData({ [field]: e.detail.value });
   },
 
-  // 保存草稿
-  handleSaveDraft() {
+   // 保存草稿
+   handleSaveDraft() {
+    console.log('保存草稿按钮被点击');
     wx.showToast({
       title: '草稿已保存',
       icon: 'success'
     });
+    setTimeout(() => {
+      console.log('跳转到首页');
+      wx.switchTab({
+        url: '/pages/shouye/shouye'
+      });
+    }, 1500);
   },
 
   // 发布项目
   handlePublishProject() {
+    console.log('发布项目按钮被点击');
     wx.showToast({
       title: '项目已发布',
       icon: 'success'
     });
+    setTimeout(() => {
+      console.log('跳转到首页');
+      wx.switchTab({
+        url: '/pages/shouye/shouye'
+      });
+    }, 1500);
   }
 });

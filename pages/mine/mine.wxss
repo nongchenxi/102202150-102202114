@@ -1,0 +1,82 @@
+/* 个人信息区域 */
+.profile-section {
+  display: flex;
+  align-items: center;
+  background-image: url('https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/p2@1x.png');
+  background-size: cover;
+  padding: 20px;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.nickname {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  color: #888;
+}
+
+.edit-description {
+  font-size: 14px;
+  color: #00aaff;
+  margin-top: 5px;
+}
+
+.edit-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 4px;
+}
+
+.settings-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* 菜单项列表 */
+.menu-list {
+  margin-top: 50rpx;
+  width: 99%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.menu-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.menu-arrow {
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="tab-container">
+    <view class="tab" bindtap="switchToCreated" style="width: 292rpx; display: block; box-sizing: border-box; height: 68rpx">我创建的项目</view>
+    <view class="tab selected" bindtap="switchToJoined" style="width: 292rpx; display: block; box-sizing: border-box; height: 68rpx">我加入的项目</view>
+  </view>
+  
+  <!-- 使用 wx:for 循环来渲染项目 -->
+  <view wx:for="{{projects}}" wx:key="index" class="project-card">
+    <image class="project-img" src="{{item.imgSrc}}" mode="aspectFill"></image>
+    <view class="project-info">
+      <view class="project-name">{{item.name}}</view>
+      <view class="project-status">{{item.status}}</view>
+      <view class="project-team">{{item.teamSize}}</view>
+    </view>
+    <view class="buttons">
+      <button class="share-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{!item.isEnded}}">分享项目</button>
+      <button class="discuss-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{!item.isEnded}}">参与讨论</button>
+      <button class="exit-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{!item.isEnded}}">退出项目</button>
+      <button class="gray-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{item.isEnded}}">分享项目</button>
+      <button class="gray-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{item.isEnded}}">参与讨论</button>
+      <button class="gray-button" style="width: 173rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" wx:if="{{item.isEnded}}">退出项目</button>
+    </view>
+  </view>
+</view>

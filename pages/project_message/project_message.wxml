@@ -1,0 +1,17 @@
+<!--pages/project_message/project_message.wxml-->
+<view class="container">
+  <block wx:for="{{notifications}}" wx:key="id">
+    <view class="notification-item">
+      <image class="icon" src="{{item.icon}}" mode="aspectFit"></image>
+      <view class="content">
+        <text class="title" style="position: relative; left: 0rpx; top: -2rpx">项目通知</text>
+        <text class="message" style="position: relative; left: 0rpx; top: 7rpx">{{item.message}}</text>
+      </view>
+      <button class="action-button {{item.isAccepted ? 'accepted' : 'read'}}" 
+              bindtap="{{item.isAccepted ? 'onRead' : 'onAccept'}}" 
+              data-id="{{item.id}}" style="width: 126rpx; display: block; box-sizing: border-box; left: -2rpx; top: -4rpx; height: 58rpx; position: relative">
+        {{item.isAccepted ? '已读' : '接受'}}
+      </button>
+    </view>
+  </block>
+</view>

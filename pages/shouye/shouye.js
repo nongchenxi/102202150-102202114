@@ -43,7 +43,7 @@ Page({
 
   onJoinProject() {
     wx.navigateTo({
-      url: '/pages/join_project/join_project'
+      url: '/pages/join_project/joinproject'
     });
   },
   onsearch(){

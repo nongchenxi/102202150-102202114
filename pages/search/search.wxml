@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="输入关键词搜索" bindinput="onSearchInput"/>
+    <image class="search-icon" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/sousuo.png" bindtap="onSearch"></image>
+  </view>
+
+  <!-- 最近搜索 -->
+  <view class="section">
+    <view class="section-title">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/if-clock-time 1@1x.png" class="icon"></image>
+      <text>最近搜索</text>
+    </view>
+    <view class="tag-container">
+      <block wx:for="{{recentSearches}}" wx:key="index">
+        <view class="tag">{{item}}</view>
+      </block>
+      <view class="tag more">更多</view>
+    </view>
+  </view>
+
+  <!-- 猜你想搜 -->
+  <view class="section">
+    <view class="section-title">
+      <image src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/iconPark-preview-open@1x.png" class="icon"></image>
+      <text>猜你想搜</text>
+    </view>
+    <view class="tag-container">
+      <block wx:for="{{suggestions}}" wx:key="index">
+        <view class="tag">{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>
