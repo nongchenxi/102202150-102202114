@@ -1,0 +1,26 @@
+<view class="chat-container">
+  <view class="message-list">
+    <!-- 循环显示消息，显示发送者的名字和头像 -->
+    <block wx:for="{{messages}}" wx:key="index">
+      <!-- 当前用户的消息，显示在右侧 -->
+      <view class="message-item" wx:if="{{item.senderId === userId}}">
+        <view class="message sender">{{item.content}}</view>
+        <image class="avatar right" src="{{item.avatarUrl}}" />
+      </view>
+      
+      <!-- 其他用户的消息，显示在左侧 -->
+      <view class="message-item" wx:if="{{item.senderId !== userId}}">
+        <image class="avatar left" src="{{item.avatarUrl}}" />
+        <view class="message-info">
+          <view class="sender-name">{{item.senderName}}</view>
+          <view class="message receiver">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="input-area">
+    <input class="input-box" placeholder="输入消息..." bindinput="onInput" value="{{inputValue}}" />
+    <button class="send-btn" bindtap="sendMessage" style="width: 166rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">发送</button>
+  </view>
+</view>

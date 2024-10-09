@@ -1,0 +1,80 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message-item {
+  display: flex;
+  margin: 10px 0;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.sender {
+  background-color: #9eea6a;
+  align-self: flex-end;
+  margin-left: auto; /* 让消息靠右对齐 */
+}
+
+.receiver {
+  background-color: #fff;
+  align-self: flex-start;
+  margin-right: auto; /* 让消息靠左对齐 */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.right {
+  margin-left: 10px;
+  order: 2; /* 让头像在消息的右边 */
+}
+
+.left {
+  margin-right: 10px;
+  order: 1; /* 让头像在消息的左边 */
+}
+
+.sender-name {
+  font-size: 12px;
+  color: #666;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.input-box {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.send-btn {
+  padding: 10px;
+  background-color: #409eff;
+  color: white;
+  border-radius: 5px;
+}
