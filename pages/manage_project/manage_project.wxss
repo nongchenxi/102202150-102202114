@@ -1,0 +1,156 @@
+.container {
+  padding: 16px;
+  background-color: #f8f8f8;
+}
+
+/* 聊天框 */
+.chat-box {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-content {
+  flex: 1;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+}
+
+.chat-title {
+  font-weight: bold;
+}
+
+.chat-time {
+  color: #999;
+}
+
+.chat-message {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* 任务分配 */
+.task-box {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-task-btn {
+  font-size: 24px;
+  color: #333;
+}
+
+.task-list {
+  margin-top: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.task-item text {
+  margin-left: 10px;
+}
+
+/* 任务文件 */
+.file-box {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.file-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.open-file-btn {
+  font-size: 24px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* 会议安排 */
+.meeting-box {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meeting-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.calendar-picker {
+  margin-top: 12px;
+}
+
+.calendar {
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  border-radius: 8px;
+  color: #333;
+}

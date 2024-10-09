@@ -1,0 +1,67 @@
+<view class="container">
+  <!-- 聊天框 -->
+  <view class="chat-box">
+    <image class="chat-avatar" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/new/图片 1 Copy 3@1x.png"></image>
+    <view class="chat-content">
+      <view class="chat-header">
+        <text class="chat-title">项目群聊</text>
+        <text class="chat-time">两分钟前</text>
+      </view>
+      <text class="chat-message" style="position: relative; left: 0rpx; top: 12rpx">我：这里是项目的任务分配</text>
+    </view>
+  </view>
+
+   <!-- 任务分配 -->
+   <view class="task-box">
+    <view class="task-header">
+      <text class="task-title">任务分配</text>
+      <button class="add-task-btn" bindtap="addTask" style="width: 144rpx; display: block; box-sizing: border-box; left: 200rpx; top: 0rpx; position: relative">+</button>
+    </view>
+    <view class="task-list">
+      <checkbox-group>
+        <block wx:for="{{tasks}}" wx:key="index">
+          <label class="task-item">
+            <checkbox value="{{item.id}}"></checkbox>
+            <text>{{item.name}}</text>
+          </label>
+        </block>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <!-- 任务文件 -->
+  <view class="file-box">
+    <view class="file-header">
+      <text class="file-title">任务文件</text>
+      <button class="open-file-btn" bindtap="uploadFile" style="width: 144rpx; display: block; box-sizing: border-box; left: 200rpx; top: 0rpx; position: relative">📂</button>
+    </view>
+    <view class="file-list">
+      <block wx:for="{{files}}" wx:key="index">
+        <view class="file-item">
+          <image class="file-icon" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/new/群组 6@1x.png"></image>
+          <text>{{item.name}} 共{{item.count}}个文件</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 会议安排 -->
+  <view class="meeting-box">
+    <view class="meeting-header">
+      <text class="meeting-title">会议安排</text>
+      <button class="calendar-btn" bindtap="addMeeting" style="width: 144rpx; display: block; box-sizing: border-box; left: 200rpx; top: 0rpx; position: relative">📅</button>
+    </view>
+    <view class="meeting-list">
+      <block wx:for="{{meetings}}" wx:key="index">
+        <view class="calendar">
+          <text>{{item.date}}</text>
+        </view>
+      </block>
+    </view>
+    <picker mode="date" class="calendar-picker" bindchange="onDateChange">
+      <view class="calendar">
+        <text>{{selectedDate}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
