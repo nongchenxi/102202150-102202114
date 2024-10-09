@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shouye/shouye",
+    "pages/mine/mine",
+    "pages/message/message",
+    "pages/all_projects/all_projects",
+    "pages/join_project/joinproject",
+    "pages/search/search",
+    "pages/add_project/add_project",
+    "pages/createdproject/createdproject",
+    "pages/joinedproject/joinedproject",
+    "pages/project_message/project_message"
+    
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智汇联创",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+
+
+  "tabBar": {
+    "color": "#A2A9B0",
+    "selectedColor": "#40A9FF",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/shouye/shouye",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye1.png",
+        "text": "首页"
+
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "images/xiaoxi.png",
+        "selectedIconPath": "images/xiaoxi1.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/wode.png",
+        "selectedIconPath": "images/wode1.png",
+        "text": "我的"
+      }
+      
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
+
