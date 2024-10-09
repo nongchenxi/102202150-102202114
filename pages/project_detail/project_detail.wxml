@@ -1,0 +1,71 @@
+<view class="container">
+  <!-- Project Image -->
+  <image style="height: 236rpx; display: block; box-sizing: border-box" class="project-image" src="https://mp-34a5d4ee-1705-4d90-aebc-3458b73c8f4f.cdn.bspapp.com/images/mine/add_project/@1x.png" mode="aspectFill" />
+
+  <!-- Project Title and Status -->
+  <view class="project-info" style="width: 686rpx; display: block; box-sizing: border-box">
+    <view class="project-title">基于大模型的市场营销策略</view>
+    <view class="recruiting-status">招募中</view>
+    <view class="creator-info">项目创建人: XXX</view>
+    <view class="team-size">2/6人</view>
+  </view>
+
+  <!-- Project Introduction -->
+  <view class="section">
+    <view class="section-title">项目介绍</view>
+    <view class="section-content">
+      这里是项目介绍这里是项目介绍这里是项目介绍这里是项目介绍这里是项目介绍这里是项目介绍...
+    </view>
+  </view>
+
+  <!-- Project Goals -->
+  <view class="section">
+    <view class="section-title">项目目标</view>
+    <view class="section-content">
+      这里是项目目标这里是项目目标这里是项目目标这里是项目目标这里是项目目标...
+    </view>
+  </view>
+
+  <!-- Recruitment Conditions -->
+  <view class="section" style="width: 686rpx; display: block; box-sizing: border-box">
+    <view class="section-title">招募条件</view>
+    <view class="condition-item">
+      <text>项目身份1</text>
+      <text>1/2</text>
+    </view>
+    <view class="condition-item">
+      <text>项目身份2</text>
+      <text>0/2</text>
+    </view>
+    <view class="condition-item">
+      <text>项目身份3</text>
+      <text>1/2</text>
+    </view>
+  </view>
+
+  <view class="section" style="width: 686rpx; display: block; box-sizing: border-box">
+  <view class="section-title">项目进程规划</view>
+  
+  <!-- 模拟表格的表头 -->
+  <view class="table">
+    <view class="table-row table-header">
+      <view class="table-cell">时间</view>
+      <view class="table-cell">事件</view>
+      <view class="table-cell">状态</view>
+    </view>
+
+    <!-- 使用 wx:for 循环遍历 timeline 数据 -->
+    <block wx:for="{{timeline}}" wx:key="index">
+      <view class="table-row">
+        <view class="table-cell">{{item.time}}</view>
+        <view class="table-cell">{{item.event}}</view>
+        <view class="table-cell">{{item.status == 'completed' ? '已完成' : (item.status == 'in-progress' ? '进行中' : '未完成')}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+  <!-- Join Button -->
+  <button class="join-btn" bindtap="joinProject">立即参与</button>
+</view>
