@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- Title with team count -->
+  <view class="header">
+    <view class="title">项目名称 ({{officialMembers.length+1}}/{{totalMembers}})</view>
+  </view>
+
+  <!-- Initiator Section -->
+  <view class="section-title" style="width: 608rpx; display: block; box-sizing: border-box">发起人</view>
+  <view class="member-item" wx:if="{{initiator}}" style="width: 608rpx; display: flex; box-sizing: border-box">
+    <image class="member-avatar" src="{{initiator.avatar}}" />
+    <text class="member-name">{{initiator.name}}</text>
+  </view>
+
+  <!-- Official Members Section -->
+  <view class="section">
+    <view class="section-title" style="width: 608rpx; display: block; box-sizing: border-box">正式成员</view>
+    <block wx:for="{{officialMembers}}" wx:key="index">
+      <view class="member-item" style="width: 608rpx; display: flex; box-sizing: border-box">
+        <image class="member-avatar" src="{{item.avatar}}" />
+        <text class="member-name">{{item.name}}</text>
+        <button class="action-button remove-button" bindtap="removeMember" data-id="{{item._id}}" style="width: 174rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">移除</button>
+      </view>
+    </block>
+  </view>
+
+  <!-- Candidate Members Section -->
+  <view class="section">
+    <view class="section-title" style="width: 608rpx; display: block; box-sizing: border-box">候补成员</view>
+    <block wx:for="{{candidateMembers}}" wx:key="index">
+      <view class="member-item">
+        <image class="member-avatar" src="{{item.avatar}}" />
+        <text class="member-name">{{item.name}}</text>
+        <button class="action-button invite-button" bindtap="inviteMember" data-id="{{item._id}}" style="width: 174rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">邀请</button>
+      </view>
+    </block>
+  </view>
+
+  <!-- Recruit Members Button -->
+  <button class="recruit-button" bindtap="recruitMembers">招募队员</button>
+</view>
